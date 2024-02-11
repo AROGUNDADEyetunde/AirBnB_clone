@@ -1,0 +1,15 @@
+def fibonacci_sequence(n: int) -> List[int]:
+    """Generate Fibonacci sequence up to n."""
+    sequence = [0, 1]
+    while sequence[-1] + sequence[-2] < n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
+
+def main():
+    """Main function to demonstrate Fibonacci sequence."""
+    n = 1000
+    fib_sequence = fibonacci_sequence(n)
+    print(f"Fibonacci sequence up to {n}: {fib_sequence}")
+
+if __name__ == "__main__":
+    main()
